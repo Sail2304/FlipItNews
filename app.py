@@ -14,7 +14,7 @@ user_input = st.text_area("Enter text for classification:")
 
 if st.button("Predict Category"):
     if user_input:
-        model = load_model(model_path=Path("Artifacts/Model/Model.pkl"))
+        model = load_model(model_path=Path("Artifacts/Model/model.pkl"))
         pred = predict(model, user_input, Path("Artifacts/Encoders/category.pkl"))
         st.write(pred)
     else:
